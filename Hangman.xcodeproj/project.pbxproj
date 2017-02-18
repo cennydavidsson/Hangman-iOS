@@ -12,6 +12,10 @@
 		CC3EE75C1E5908AD007C2671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC3EE75A1E5908AD007C2671 /* Main.storyboard */; };
 		CC3EE75E1E5908AD007C2671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC3EE75D1E5908AD007C2671 /* Assets.xcassets */; };
 		CC3EE7611E5908AD007C2671 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC3EE75F1E5908AD007C2671 /* LaunchScreen.storyboard */; };
+		CC3EE7771E59092B007C2671 /* Hangman.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3EE7761E59092B007C2671 /* Hangman.swift */; };
+		CC3EE77B1E590973007C2671 /* HangmanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3EE7791E59096B007C2671 /* HangmanTests.swift */; };
+		CC3EE77D1E590A15007C2671 /* CharacterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3EE77C1E590A15007C2671 /* CharacterExtension.swift */; };
+		CC3EE77F1E590A48007C2671 /* CharacterExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3EE77E1E590A48007C2671 /* CharacterExtensionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,10 @@
 		CC3EE7621E5908AD007C2671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC3EE7671E5908AD007C2671 /* HangmanUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HangmanUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3EE76D1E5908AD007C2671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC3EE7761E59092B007C2671 /* Hangman.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hangman.swift; sourceTree = "<group>"; };
+		CC3EE7791E59096B007C2671 /* HangmanTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HangmanTests.swift; sourceTree = "<group>"; };
+		CC3EE77C1E590A15007C2671 /* CharacterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterExtension.swift; sourceTree = "<group>"; };
+		CC3EE77E1E590A48007C2671 /* CharacterExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterExtensionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,12 +83,11 @@
 		CC3EE7551E5908AD007C2671 /* Hangman */ = {
 			isa = PBXGroup;
 			children = (
-				CC3EE7561E5908AD007C2671 /* AppDelegate.swift */,
+				CC3EE7801E590B10007C2671 /* Helper extensions */,
+				CC3EE7811E590B4A007C2671 /* Supporting files */,
 				CC3EE7581E5908AD007C2671 /* ViewController.swift */,
+				CC3EE7761E59092B007C2671 /* Hangman.swift */,
 				CC3EE75A1E5908AD007C2671 /* Main.storyboard */,
-				CC3EE75D1E5908AD007C2671 /* Assets.xcassets */,
-				CC3EE75F1E5908AD007C2671 /* LaunchScreen.storyboard */,
-				CC3EE7621E5908AD007C2671 /* Info.plist */,
 			);
 			path = Hangman;
 			sourceTree = "<group>";
@@ -88,10 +95,39 @@
 		CC3EE76A1E5908AD007C2671 /* HangmanUnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				CC3EE7821E590C07007C2671 /* Helper extensions */,
+				CC3EE7791E59096B007C2671 /* HangmanTests.swift */,
 				CC3EE76D1E5908AD007C2671 /* Info.plist */,
 			);
 			name = HangmanUnitTests;
 			path = HangmanTests;
+			sourceTree = "<group>";
+		};
+		CC3EE7801E590B10007C2671 /* Helper extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CC3EE77C1E590A15007C2671 /* CharacterExtension.swift */,
+			);
+			name = "Helper extensions";
+			sourceTree = "<group>";
+		};
+		CC3EE7811E590B4A007C2671 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				CC3EE7561E5908AD007C2671 /* AppDelegate.swift */,
+				CC3EE75D1E5908AD007C2671 /* Assets.xcassets */,
+				CC3EE75F1E5908AD007C2671 /* LaunchScreen.storyboard */,
+				CC3EE7621E5908AD007C2671 /* Info.plist */,
+			);
+			name = "Supporting files";
+			sourceTree = "<group>";
+		};
+		CC3EE7821E590C07007C2671 /* Helper extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CC3EE77E1E590A48007C2671 /* CharacterExtensionTests.swift */,
+			);
+			name = "Helper extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +186,7 @@
 					CC3EE7661E5908AD007C2671 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 4BJ69CG5TM;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = CC3EE7521E5908AD007C2671;
 					};
@@ -200,7 +237,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC3EE7591E5908AD007C2671 /* ViewController.swift in Sources */,
+				CC3EE77D1E590A15007C2671 /* CharacterExtension.swift in Sources */,
 				CC3EE7571E5908AD007C2671 /* AppDelegate.swift in Sources */,
+				CC3EE7771E59092B007C2671 /* Hangman.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +247,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC3EE77B1E590973007C2671 /* HangmanTests.swift in Sources */,
+				CC3EE77F1E590A48007C2671 /* CharacterExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,11 +404,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4BJ69CG5TM;
 				INFOPLIST_FILE = HangmanTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.cenny.HangmanTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hangman.app/Hangman";
 			};
@@ -378,6 +421,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4BJ69CG5TM;
 				INFOPLIST_FILE = HangmanTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
